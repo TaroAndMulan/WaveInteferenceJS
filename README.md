@@ -1,27 +1,40 @@
-# Sine Wave inteference simulation (React three fiber)
-This project allows you to simulate the interference patterns of up to four sine waves on the web browser.
+# Sine wave inteference simulator (React three fiber)
+This project allows you to simulate the interference patterns of up to four sine waves on the web browser. 
+Users can adjust location, amplitude, wavelength, and frequency of each waves. 
 
-![pic2](./public/blueexample.gif)
 
 
 ![pic1](./public/3dwave.gif)
 ![pic3](./public/redexample.gif)
 
-Users can adjust location, amplitude, wavelength, and frequency of each waves.
 
-![pic4](./public/2wave.gif)
 
 ## DEMO
 
 
 ## Installation
->git clone [this repository]
->cd [this repository]
->npm install
->npm run dev
+```
+> git clone https://github.com/TaroAndMulan/WaveInteferenceJS.git
+> cd WaveInteferenceJS
+> npm install
+> npm run dev
+```
+## Usage
+* Crest - the color of crest 
+* Trough - the color of trough  
+* Try to find the combination of these 2 colors that look nice. Here is an example of inteference of waves from 2 point sources.
 
+![pic4](./public/2wave.gif)
+
+* GridSize - determine how large the plane is. For example, Gridsize "100" will create a plane with dimension 100x100.
+* Resolution - resolution of "500" will divide the grid into 500x500 square. Increase this number if you want better visual. Lower this number if your Pc or mobile are low end device.
+* Wavelength, frequency, and amplitude are self-explanatory.
+* location - this is where each wave originate from. The middle point of the grid is always an origin (0,0).  
 ## How did I make this?
-I use React for the frontend and three.js(React Three Fiber) as the graphics library. The sine waves are just three.js plane geometry with custom shaders. Please note that the current code is not written for anyone to learn from. It is unfinished. I plan to rewrite it for better readability when I have more free time.
+
+![pic2](./public/blueexample.gif)
+
+I use React for the frontend and three.js(React Three Fiber) as the graphics library. The sine waves are just three.js plane geometry with custom shaders. Please note that the current code is not written for anyone to learn from. It is unfinished. I plan to rewrite it from scratch for better readability in the future.
 
 Instead of reading my code, just follow my guide below.
 

@@ -84,7 +84,7 @@ const wave4= useControls( 'wave 4', {
   return (<>
 
     <div className="h-screen">
-  <Canvas  camera={{ position: [50.0, 3.0, 0], fov: 60 }}  >
+  <Canvas  camera={{ position: [0.0, 100.0, 50.0], fov: 60 }}  >
   <axesHelper />
   <CameraControls/>
   <Inteference6  nWaves={4} wireframe={setting.wireframe}
