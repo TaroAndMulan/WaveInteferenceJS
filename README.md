@@ -10,7 +10,7 @@ Users can adjust location, amplitude, wavelength, and frequency of each waves.
 
 
 ## DEMO
-
+[https://wave-inteference-js.vercel.app/](https://wave-inteference-js.vercel.app/)
 
 ## Installation
 ```
