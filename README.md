@@ -12,6 +12,8 @@ Users can adjust location, amplitude, wavelength, and frequency of each waves.
 ## DEMO
 [https://wave-inteference-js.vercel.app/](https://wave-inteference-js.vercel.app/)
 
+_left click - Rotate , middle mouse - Zoom, right click - pan_
+
 ## Installation
 ```
 > git clone https://github.com/TaroAndMulan/WaveInteferenceJS.git
@@ -22,7 +24,7 @@ Users can adjust location, amplitude, wavelength, and frequency of each waves.
 ## Usage
 * Crest - the color of crest 
 * Trough - the color of trough  
-* Try to find the combination of these 2 colors that look nice. Here is an example of inteference of waves from 2 point sources.
+* Try to find the combination of these 2 colors that look nice. Here is an example of inteference of waves from 2 point sources. Can you see the antibuff
 
 ![pic4](./public/2wave.gif)
 
