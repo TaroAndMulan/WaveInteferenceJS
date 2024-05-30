@@ -78,7 +78,6 @@ const Scene = () => {
     <>
       <div className="h-screen">
         <Canvas camera={{ position: [0.0, 100.0, 50.0], fov: 60, far: 6000 }}>
-          <axesHelper />
           <CameraControls />
           <Inteference
             nWaves={4}
