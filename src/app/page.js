@@ -34,13 +34,13 @@ const Scene = () => {
     trough: { value: default_trough_color },
     wireframe: { value: false },
     gridSize: { value: 100, min: 1, max: 1000, step: 10 },
-    resolution: { value: 500, min: 2, max: 2000, step: 100 },
+    resolution: { value: 500, min: 4, max: 2000, step: 100 },
   });
 
   const [wave1, set] = useControls("wave 1", () => ({
     frequency: { value: 3.0, min: 0, max: 10.0, step: 1.0 },
-    amplitude: { value: 1.0, min: 0, max: 10.0, step: 1.0 },
-    wave_length: { value: 5.0, min: 0, max: 50.0, step: 1.0 },
+    amplitude: { value: 1.0, min: 0, max: 20.0, step: 1.0 },
+    wave_length: { value: 5.0, min: 0, max: 50.0, step: 1.0, label: "λ" },
     phase: { value: 0.0, suffix: "°" },
     location: { x: 10.0, y: 0.0 },
     on: { value: true },
@@ -48,8 +48,8 @@ const Scene = () => {
   
   const [wave2, set2] = useControls("wave 2", () => ({
     frequency: { value: 3.0, min: 0, max: 10.0, step: 1.0 },
-    amplitude: { value: 1.0, min: 0, max: 10.0, step: 1.0 },
-    wave_length: { value: 5.0, min: 0, max: 50.0, step: 1.0 },
+    amplitude: { value: 1.0, min: 0, max: 20.0, step: 1.0 },
+    wave_length: { value: 5.0, min: 0, max: 50.0, step: 1.0, label: "λ" },
     phase: { value: 0.0, suffix: "°" },
     location: { x: -10.0, y: 0.0 },
     on: { value: true },
@@ -57,8 +57,8 @@ const Scene = () => {
 
   const [wave3, set3] = useControls("wave 3", () => ({
       frequency: { value: 3.0, min: 0, max: 10.0, step: 1.0 },
-      amplitude: { value: 1.0, min: 0, max: 50.0, step: 1.0 },
-      wave_length: { value: 5.0, min: 0, max: 50.0, step: 1.0 },
+      amplitude: { value: 1.0, min: 0, max: 20.0, step: 1.0 },
+      wave_length: { value: 5.0, min: 0, max: 50.0, step: 1.0, label: "λ" },
       phase: { value: 0.0, suffix: "°" },
       location: { x: 0.0, y: 10.0 },
       on: { value: false },
@@ -66,8 +66,8 @@ const Scene = () => {
   );
   const [wave4, set4] = useControls("wave 4",() => ({
       frequency: { value: 3.0, min: 0, max: 10.0, step: 1.0 },
-      amplitude: { value: 1.0, min: 0, max: 50.0, step: 1.0 },
-      wave_length: { value: 5.0, min: 0, max: 50.0, step: 1.0 },
+      amplitude: { value: 1.0, min: 0, max: 20.0, step: 1.0 },
+      wave_length: { value: 5.0, min: 0, max: 50.0, step: 1.0, label: "λ"},
       phase: { value: 0.0, suffix: "°" },
       location: { x: 0.0, y: -10.0 },
       on: { value: false },

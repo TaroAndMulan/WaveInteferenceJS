@@ -14,14 +14,15 @@ Users can adjust location, amplitude, wavelength, and frequency of each waves.
 
 _left click - Rotate , middle mouse - Zoom, right click - pan_
 
-## Installation
+## Local Installation
 ```
 > git clone https://github.com/TaroAndMulan/WaveInteferenceJS.git
 > cd WaveInteferenceJS
 > npm install
 > npm run dev
+ http://localhost:3000
 ```
-## Usage
+## User Manual
 * Crest - color of the crest 
 * Trough - color of the trough  
 * Try to find the combination of these 2 colors that look nice. Here is an example of inteference of waves from 2 point sources.
@@ -52,4 +53,5 @@ If you are not familiar with react or three.js or shading then
 
 ## TBD
 * Add other type of waves. 
-* I intend to rewrite the code to make it easier to read.
+* Add time control functionality (pause/resume/change simulation speed)
+* rewrite and document the code
