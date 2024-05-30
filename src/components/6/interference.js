@@ -1,20 +1,14 @@
-import { Canvas, useFrame } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Color, SphereGeometry, Vec, Vector2, Vector3} from "three";
-import { CameraControls,PivotControls, Box } from "@react-three/drei";
 import vertexShader from './vertexShader';
 import fragmentShader from './fragmentShader';
-const pink = new Vector3(1.0,0.0,1.0);
-const blue = new Vector3(0.0,0.0,1.0);
-const saberblue = new Vector3(1.0,2.0,3.0);
-const saberorange= new Vector3(3.0,2.0,1.0);
-const saberred= new Vector3(3.0,0.0,0.0);
-const cutered = new Color("#1da2d8") 
-const cuteblue = new Color("#dc143c")
-const Inteference6 = ({nWaves,color1,color2,wireframe,gridSize,resolution,
+
+
+const Inteference = ({nWaves,color1,color2,wireframe,gridSize,resolution,
   amplitude1,amplitude2,amplitude3,amplitude4,
   frequency1,frequency2,frequency3,frequency4,
   wavelength1,wavelength2,wavelength3,wavelength4,
+  phase1,phase2,phase3,phase4,
   location1,location2,location3,location4,
   on1,on2,on3,on4}) => {
     const mesh = useRef();
@@ -27,6 +21,7 @@ const Inteference6 = ({nWaves,color1,color2,wireframe,gridSize,resolution,
         u_frequencies: {value: [frequency1,frequency2,frequency3,frequency4]},
         u_wavelengths: {value: [wavelength1,wavelength2,wavelength3,wavelength4]},
         u_positions: {value: [location1, location2, location3,location4]},
+        u_phases: {value: [phase1,phase2,phase3,phase4]},
         u_nWaves:{value:nWaves},
         u_ons:{value:[true,false]}
       }), []
@@ -54,6 +49,12 @@ const Inteference6 = ({nWaves,color1,color2,wireframe,gridSize,resolution,
      mesh.current.material.uniforms.u_positions.value[1] = location2;
      mesh.current.material.uniforms.u_positions.value[2] = location3;
      mesh.current.material.uniforms.u_positions.value[3] = location4;
+    
+     mesh.current.material.uniforms.u_phases.value[0] = phase1;
+     mesh.current.material.uniforms.u_phases.value[1] = phase2;
+     mesh.current.material.uniforms.u_phases.value[2] = phase3;
+     mesh.current.material.uniforms.u_phases.value[3] = phase4;
+
      mesh.current.material.uniforms.u_ons.value[0] = on1;
      mesh.current.material.uniforms.u_ons.value[1] = on2;
      mesh.current.material.uniforms.u_ons.value[2] = on3;
@@ -61,7 +62,7 @@ const Inteference6 = ({nWaves,color1,color2,wireframe,gridSize,resolution,
 
      
     }, [amplitude1, amplitude2,amplitude3,amplitude4,frequency1,frequency2,frequency3,
-      frequency4,wavelength1,wavelength2,wavelength3,wavelength4,
+      frequency4,wavelength1,wavelength2,wavelength3,wavelength4, phase1,phase2,phase3,phase4,
       color1,color2,location1,location2,location3,location4,
     on1,on2,on3,on4]);
 
@@ -91,7 +92,14 @@ const Inteference6 = ({nWaves,color1,color2,wireframe,gridSize,resolution,
     );
   };
 
-  export default Inteference6
+  export default Inteference
 
   //        u_colors: { value: [new Color("#1da2d8"),new Color("#dc143c") ]},
-//
+/*
+const pink = new Vector3(1.0,0.0,1.0);
+const blue = new Vector3(0.0,0.0,1.0);
+const saberblue = new Vector3(1.0,2.0,3.0);
+const saberorange= new Vector3(3.0,2.0,1.0);
+const saberred= new Vector3(3.0,0.0,0.0);
+const cutered = new Color("#1da2d8") 
+const cuteblue = new Color("#dc143c")*/

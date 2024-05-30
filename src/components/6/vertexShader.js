@@ -3,6 +3,7 @@ uniform float u_time;
 uniform float[4] u_amplitudes;
 uniform float[4] u_frequencies;
 uniform float[4] u_wavelengths;
+uniform float[4] u_phases;
 uniform vec2[4] u_positions;
 uniform bool[4] u_ons;
 uniform int u_nWaves;
@@ -25,7 +26,7 @@ void main() {
       if(length(wPosition-vPosition)<1.0)
         vSource += 1.1;
       if (step(length(vPosition-wPosition),frequency*wavelength*u_time)>=1.0){
-        heights[i] = sin(-1.0*length(vPosition-wPosition)*2.0*3.14159/wavelength + 2.0*3.14159*frequency* u_time + 3.14158/2.0) * amplitude; 
+        heights[i] = sin(-1.0*length(vPosition-wPosition)*2.0*3.14159/wavelength + 2.0*3.14159*frequency* u_time + u_phases[i]) * amplitude; 
         modelPosition.y += heights[i];
         propotions[i] =  (heights[i]+amplitude)/(2.0*amplitude);
       }

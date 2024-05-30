@@ -22,17 +22,19 @@ _left click - Rotate , middle mouse - Zoom, right click - pan_
 > npm run dev
 ```
 ## Usage
-* Crest - the color of crest 
-* Trough - the color of trough  
-* Try to find the combination of these 2 colors that look nice. Here is an example of inteference of waves from 2 point sources. Can you see the antibuff
+* Crest - color of the crest 
+* Trough - color of the trough  
+* Try to find the combination of these 2 colors that look nice. Here is an example of inteference of waves from 2 point sources.
 
 ![pic4](./public/2wave.gif)
 
 * GridSize - determine how large the plane is. For example, Gridsize "100" will create a plane with dimension 100x100.
-* Resolution - resolution of "500" will divide the grid into 500x500 square. Increase this number if you want better visual. Lower this number if your Pc or mobile are low end device.
-* Wavelength, frequency, and amplitude are self-explanatory.
-* location - this is where each wave originate from. The middle point of the grid is always an origin (0,0).  
-## How did I make this?
+* Resolution - Setting the resolution to '500' will divide the grid into a 500x500 square for the simulation. Increase this number for better visuals. Lower this number if your PC or mobile device struggles to run smoothly.
+* Wavelength, frequency, amplitude, phases(°) - are properties of wave. There is no velocity input since it can be determine from wavelenght and frequency (v=fλ)
+* location - Source location, the point in the middle is origin (0,0). 
+* on - simulate this wave or not 
+
+## How it works?
 
 ![pic2](./public/blueexample.gif)
 
@@ -45,10 +47,9 @@ If you already know react three fiber, then you are ready to learn how to create
 
 If you are not familiar with react or three.js or shading then
 * **Learn React (optional)**: You don't have to use React; plain JavaScript is fine.
-* **Learn Three.JS**: There are plenty of learning materials, but the best one is the [Three.js journey](https://threejs-journey.com/) by Bruno Simmon. React Three Fiber is optional; you can use vanilla Three.js.
+* **Learn Three.JS (optional)**: There are plenty of learning materials, but the best one is the [Three.js journey](https://threejs-journey.com/) by Bruno Simmon. 
 * **Learn shaders**  : Even if you've never heard of shaders before, it won't take more than a few days to create a project like this. Visit [shadertoy](https://www.shadertoy.com/) to see what you can do with shaders. Bruno Simmon course mentioned above also teaches you how to write custom shaders for Three.js. Another excellent resource is [the book of shading](https://thebookofshaders.com/) (it's free and is the most recommended resource to learn from).
 
 ## TBD
-* Currently, all waves are in phase. Once I have free time, I will add an option to start each wave with a different phase.
 * Add other type of waves. 
 * I intend to rewrite the code to make it easier to read.
