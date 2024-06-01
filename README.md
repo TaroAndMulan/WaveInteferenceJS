@@ -5,16 +5,21 @@ Users can adjust location, amplitude, wavelength, and frequency of each waves.
 
 
 ![pic1](./public/3dwave.gif)
-![pic3](./public/redexample.gif)
-
 
 
 ## DEMO
+![pic3](./public/storm.gif)
+
+
 [https://wave-inteference-js.vercel.app/](https://wave-inteference-js.vercel.app/)
 
 _left click - Rotate , middle mouse - Zoom, right click - pan_
 
 ## Local Installation
+
+![pic4](./public/2wave.gif)
+
+
 ```
 > git clone https://github.com/TaroAndMulan/WaveInteferenceJS.git
 > cd WaveInteferenceJS
@@ -23,17 +28,21 @@ _left click - Rotate , middle mouse - Zoom, right click - pan_
  http://localhost:3000
 ```
 ## User Manual
-* Crest - color of the crest 
-* Trough - color of the trough  
-* Try to find the combination of these 2 colors that look nice. Here is an example of inteference of waves from 2 point sources.
+* **Crest** - color of the crest 
+* **Trough** - color of the trough  
+ *Accepts manual color input via Hex color code. '#' sign infront of the number is required, e.g., "#FF00FF"*.
 
-![pic4](./public/2wave.gif)
+ Try to find the combination of these two colors that looks nice (use any color picker website to find a nice pallete). Here is an example of mixing red and white.
 
-* GridSize - determine how large the plane is. For example, Gridsize "100" will create a plane with dimension 100x100.
-* Resolution - Setting the resolution to '500' will divide the grid into a 500x500 square for the simulation. Increase this number for better visuals. Lower this number if your PC or mobile device struggles to run smoothly.
-* Wavelength, frequency, amplitude, phases(°) - are properties of wave. There is no velocity input since it can be determine from wavelenght and frequency (v=fλ)
-* location - Source location, the point in the middle is origin (0,0). 
-* on - simulate this wave or not 
+![pic7](./public/redexample.gif)
+
+
+
+* **GridSize** - determine how large the plane is. For example, Gridsize "100" will create a plane with dimension 100x100.
+* **Resolution** - Setting the resolution to '500' will divide the grid into a 500x500 square for the simulation. ***Increase this number for better visuals. Lower this number if your PC or mobile device struggles to run smoothly.***
+* **Wavelength, frequency, amplitude, phases(°)** - are properties of wave. There is no input field for wave speed because it will be calculated from wavelenght and frequency (v=fλ)
+* **location** - Location of the source (x,y). The point in the middle is always the origin (0,0). You can determine the x and y axes and their direction by inputting some numbers and observing the changes. 
+* **on** - simulate this wave or not? 
 
 ## How it works?
 
@@ -53,5 +62,9 @@ If you are not familiar with react or three.js or shading then
 
 ## TBD
 * Add other type of waves. 
+* Add inward waves (currently, all waves are outward)
+* Add option to customise each wave's color individually 
+* Add circular base
 * Add time control functionality (pause/resume/change simulation speed)
-* rewrite and document the code
+* Add a measuring tool in case someone wants to do physics with this (e.g., an on-screen ruler or pointer).
+* rewrite and document the code 
