@@ -6,7 +6,6 @@ Users can adjust location, amplitude, wavelength, and frequency of each waves.
 
 ![pic1](./public/3dwave.gif)
 
-
 ## DEMO
 ![pic3](./public/storm.gif)
 
@@ -46,14 +45,14 @@ _left click - Rotate , middle mouse - Zoom, right click - pan_
 
 ## How it works?
 
-![pic2](./public/blueexample.gif)
 
-I use React for the frontend and three.js(React Three Fiber) as the graphics library. The sine waves are just three.js plane geometry with custom shaders. Please note that the current code is not written for anyone to learn from. It is unfinished. I plan to rewrite it from scratch for better readability in the future.
+![pic11](./public/sphere.gif)
+
+I use React for the frontend and three.js(React Three Fiber) as the graphics library. The sine waves are just three.js plane geometry with custom shaders. Please note that the current code is not written to be learnt from. I plan to refactor the code and document it later.
 
 Instead of reading my code, just follow my guide below.
 
-If you already know react three fiber, then you are ready to learn how to create a wave. This blog post will teach you all you need.
-[wave-tutorial](https://blog.maximeheckel.com/posts/the-study-of-shaders-with-react-three-fiber/)
+If you already know react three fiber, then you are ready to learn how to create a wave. This blog post will teach you all you need [wave-tutorial](https://blog.maximeheckel.com/posts/the-study-of-shaders-with-react-three-fiber/)
 
 If you are not familiar with react or three.js or shading then
 * **Learn React (optional)**: You don't have to use React; plain JavaScript is fine.

@@ -58,8 +58,8 @@ const Scene = () => {
 
 
   // "label" : "value(string)"
-  const [preset,setPreset] = useControls("Example", ()=>({
-    example : {options : {
+  const [preset,setPreset] = useControls( ()=>({
+    preset : {options : {
       "2 waves" : "2wave",
       "1 wave (wireframe)" : "1wave",
       "The storm": "storm",
