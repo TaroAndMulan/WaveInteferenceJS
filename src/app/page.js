@@ -40,7 +40,7 @@ const Scene = () => {
   const cameraControlsRef = useRef()
 
 
-  // reset value to choosen example
+  // reset value to chosen example
   function setpreset(example) {
     if (wave1 && wave2 && wave3 && wave4 && cameraControlsRef.current){
       let waves = setWave(setting,wave1,wave2,wave3,wave4,example)
@@ -128,6 +128,7 @@ const Scene = () => {
       <div className="h-screen">
 
         <Canvas camera={{ position: [0,100,0], fov: 60, far: 6000 }}>
+
           <CameraControls ref={cameraControlsRef}/>
           <Waves
             nWaves={4}

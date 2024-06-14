@@ -2,6 +2,7 @@ import { useFrame } from "@react-three/fiber";
 import { useEffect, useMemo, useRef, useState } from "react";
 import vertexShader from './shader/vertexShader';
 import fragmentShader from './shader/fragmentShader';
+import { DoubleSide } from "three";
 
 
 const Waves = ({nWaves,color1,color2,wireframe,gridSize,resolution,marker,
@@ -89,6 +90,7 @@ const Waves = ({nWaves,color1,color2,wireframe,gridSize,resolution,marker,
           vertexShader={vertexShader}
           uniforms={uniforms}
           wireframe={wireframe}
+          side={DoubleSide}
         />
       </mesh>
     );
